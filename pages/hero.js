@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import Tradingpic from '../assets/tradingpic.png'
 import Image from 'next/image';
 import profilepic from '../assets/Media.jpg'
-import Multiscale from '../assets/multiscale.png'
+import Multiscale from '../assets/fullstackmultiscale.png'
 
 export default function Hero() {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,28 +24,30 @@ export default function Hero() {
     }
   }, [darkMode]);
 
-  // Projects data
+
+  // First, update your projects data at the top of your component:
   const projects = [
     {
       id: 1,
       title: "Full-Stack Trading Platform",
       description: "Developed a full-stack Trading API integrating live data solutions, built with JavaScript, React, Node.js, and MongoDB for real-time performance.",
       tech: ["React", "Node.js", "MongoDB", "vite", "Bootstrap"],
-      image: Tradingpic
+      images: Multiscale // Use the imported image directly
     },
     {
       id: 2,
       title: "Websites Development",
       description: "I crafted intuitive UI/UX, seamless product browsing, and secure cart functionality. I integrated RESTful APIs for real-time inventory and user authentication, ensuring scalability.",
       tech: ["Next.js", "Chart.js", "Tailwind CSS", "Firebase"],
-      image: "../assets/tradingpic.png"
+      images: Multiscale // Use the imported image or add a new import
     },
     {
       id: 3,
       title: "Created a dynamic web dashboard",
       description: "Built a responsive web dashboard using JavaScript, React, Node.js, and MongoDB, delivering real-time data insights with sleek, interactive visualizations.",
       tech: ["React", "TypeScript", "Redux", "git", "vite"],
-      image: "/project3.jpg"
+      // You can either import another image or use a placeholder
+      images: null // We'll handle this case in the JSX
     }
   ];
 
@@ -266,7 +268,7 @@ export default function Hero() {
                 <h3 className="text-2xl font-semibold mb-4">Education & Experience</h3>
                 <div className="space-y-4">
                   <div className="border-l-4 border-purple-500 pl-4 py-2">
-                   
+
                     <h4 className="text-lg font-medium"> FullStack Developer</h4>
                     <p className="text-gray-600 dark:text-gray-300">BNR Cogniitec • Dec-2024 - Present</p>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Leading frontend development for enterprise SaaS products</p>
@@ -287,9 +289,9 @@ export default function Hero() {
           </div>
         </section>
 
-      
 
-        {/* Projects Section */}
+
+       // Then replace your projects section JSX with this:
         <section id="projects" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -318,14 +320,32 @@ export default function Hero() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="h-48 bg-gray-200 dark:bg-gray-700 relative">
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400">
-                      Project Image
-                      <img src={project.image} className="w-full h-48 object-cover" />
-                    </div>
+                  {/* Fixed Image Section */}
+                  <div className="h-48 bg-gray-200 dark:bg-gray-700 relative overflow-hidden">
+                    {project.images ? (
+                      <Image
+                        src={project.images}
+                        alt={project.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        width={400}
+                        height={192}
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyKKhUnrNcNM91BF5pX2HaH9bcfaSXWGaRmknyKKhUnrNcNM91BF5pX2HaH9bcfaSXWGaRmknyKKhUnrNcNM91BF5pX2HaH9bcfaSXWGaRmknyKKhUnr//Z"
+                        priority={index === 0}
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600">
+                        <div className="text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          <span className="text-sm">Project Image</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
+
                   <div className="p-6">
-                    
                     <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">

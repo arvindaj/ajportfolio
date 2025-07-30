@@ -52,11 +52,11 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
-"[project]/assets/multiscale.png (static in ecmascript)": ((__turbopack_context__) => {
+"[project]/assets/fullstackmultiscale.png (static in ecmascript)": ((__turbopack_context__) => {
 
 {
-__turbopack_context__.v("/_next/static/media/multiscale.bd130775.png");}}),
-"[project]/assets/multiscale.png.mjs { IMAGE => \"[project]/assets/multiscale.png (static in ecmascript)\" } [app-client] (structured image object, ecmascript)": ((__turbopack_context__) => {
+__turbopack_context__.v("/_next/static/media/fullstackmultiscale.e02b0229.png");}}),
+"[project]/assets/fullstackmultiscale.png.mjs { IMAGE => \"[project]/assets/fullstackmultiscale.png (static in ecmascript)\" } [app-client] (structured image object, ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
 var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
@@ -64,13 +64,13 @@ var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
-var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$multiscale$2e$png__$28$static__in__ecmascript$29$__ = __turbopack_context__.i("[project]/assets/multiscale.png (static in ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$fullstackmultiscale$2e$png__$28$static__in__ecmascript$29$__ = __turbopack_context__.i("[project]/assets/fullstackmultiscale.png (static in ecmascript)");
 ;
 const __TURBOPACK__default__export__ = {
-    src: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$multiscale$2e$png__$28$static__in__ecmascript$29$__["default"],
-    width: 1904,
-    height: 916,
-    blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAb0lEQVR42iWNWwoCMRAEc4XNZDIm+yDBNSCLfgmieA/x/gcps/pRNHQ3lNMghM6eFpXYCSKIH2hzwE1JeV4Ll3PltB6p84ExGWaGquJq9nzuA+/XxOO20dZKKYWc8/8g4hlNWFL4aWIv90G6ZmsLX7sAKnBpnm8UAAAAAElFTkSuQmCC",
+    src: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$fullstackmultiscale$2e$png__$28$static__in__ecmascript$29$__["default"],
+    width: 1898,
+    height: 905,
+    blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAj0lEQVR42gGEAHv/ADkuIv84LSH/Ix4Y/xAQEP8ODxH/GB8o/xYcJf8REhX/ACwsK/8pKCj/HBwb/xUVFf8UFRb/HCIo/x0jKf8WFxj/AE1UVf9VXl//WlNY/2FVWv9nX1r/Z2Rb/1VjZP9KVFX/AIiVlf+XqKf/q5yj/7aepP+6qpz/tqyc/56xsf+Sn5r/4Rg9K4jUedMAAAAASUVORK5CYII=",
     blurWidth: 8,
     blurHeight: 4
 };
@@ -94,7 +94,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$tradingpic$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$tradingpic$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/assets/tradingpic.png.mjs { IMAGE => "[project]/assets/tradingpic.png (static in ecmascript)" } [app-client] (structured image object, ecmascript)');
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$Media$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$Media$2e$jpg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/assets/Media.jpg.mjs { IMAGE => "[project]/assets/Media.jpg (static in ecmascript)" } [app-client] (structured image object, ecmascript)');
-var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$multiscale$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$multiscale$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/assets/multiscale.png.mjs { IMAGE => "[project]/assets/multiscale.png (static in ecmascript)" } [app-client] (structured image object, ecmascript)');
+var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$fullstackmultiscale$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$fullstackmultiscale$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/assets/fullstackmultiscale.png.mjs { IMAGE => "[project]/assets/fullstackmultiscale.png (static in ecmascript)" } [app-client] (structured image object, ecmascript)');
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -135,7 +135,7 @@ function Hero() {
                 "vite",
                 "Bootstrap"
             ],
-            images: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$tradingpic$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$tradingpic$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__ // Use the imported image directly
+            images: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$fullstackmultiscale$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$fullstackmultiscale$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__ // Use the imported image directly
             ["default"]
         },
         {
@@ -148,7 +148,7 @@ function Hero() {
                 "Tailwind CSS",
                 "Firebase"
             ],
-            images: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$multiscale$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$multiscale$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__ // Use the imported image or add a new import
+            images: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$fullstackmultiscale$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$fullstackmultiscale$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__ // Use the imported image or add a new import
             ["default"]
         },
         {
@@ -2449,4 +2449,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }}),
 }]);
 
-//# sourceMappingURL=_9e93d27d._.js.map
+//# sourceMappingURL=_83a15bf5._.js.map
