@@ -5,10 +5,12 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import Tradingpic from '../assets/tradingpic.png'
+import Landingpaval from '../assets/landingpagepaval.png'
 import Image from 'next/image';
 import profilepic from '../assets/Media.jpg'
 import Multiscale from '../assets/fullstackmultiscale.png'
+import Skillorelanding from '../assets/landingskillorea.png'
+import Dashboard from '../assets/dashboard.png'
 
 export default function Hero() {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,31 +27,77 @@ export default function Hero() {
   }, [darkMode]);
 
 
-  // First, update your projects data at the top of your component:
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
+
   const projects = [
     {
       id: 1,
       title: "Full-Stack Trading Platform",
-      description: "Developed a full-stack Trading API integrating live data solutions, built with JavaScript, React, Node.js, and MongoDB for real-time performance.",
-      tech: ["React", "Node.js", "MongoDB", "vite", "Bootstrap"],
-      images: Multiscale // Use the imported image directly
+      description: "Developed a comprehensive trading platform with real-time data integration, advanced charting capabilities, and secure transaction processing. Built with modern technologies for optimal performance and scalability.",
+      tech: ["React", "Node.js", "MongoDB", "WebSocket", "Chart.js"],
+      image: Multiscale,
+      demoUrl: "https://multiscalefrontendwebsite.vercel.app/",
+      githubUrl: "https://github.com/username/trading-platform",
+      features: ["Real-time market data", "Advanced charting", "Portfolio management", "Risk analytics"]
     },
     {
       id: 2,
-      title: "Websites Development",
-      description: "I crafted intuitive UI/UX, seamless product browsing, and secure cart functionality. I integrated RESTful APIs for real-time inventory and user authentication, ensuring scalability.",
-      tech: ["Next.js", "Chart.js", "Tailwind CSS", "Firebase"],
-      images: Multiscale // Use the imported image or add a new import
+      title: "Skillore E-Learning Platform",
+      description: "Created an interactive e-learning platform with course management, video streaming, progress tracking, and certification system. Features responsive design and seamless user experience.",
+      tech: ["Next.js", "TypeScript", "Prisma", "Stripe", "AWS S3"],
+      image: Skillorelanding,
+      demoUrl: "https://landingpageone-pi.vercel.app/",
+      githubUrl: "https://github.com/username/skillore-platform",
+      features: ["Course management", "Video streaming", "Progress tracking", "Certifications"]
     },
     {
       id: 3,
-      title: "Created a dynamic web dashboard",
-      description: "Built a responsive web dashboard using JavaScript, React, Node.js, and MongoDB, delivering real-time data insights with sleek, interactive visualizations.",
-      tech: ["React", "TypeScript", "Redux", "git", "vite"],
-      // You can either import another image or use a placeholder
-      images: null // We'll handle this case in the JSX
+      title: "Paval Business Landing",
+      description: "Designed and developed a modern business landing page with stunning visuals, smooth animations, and conversion-optimized layout. Fully responsive with excellent performance metrics.",
+      tech: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
+      image: Landingpaval,
+      demoUrl: "https://paval-landing.example.com",
+      githubUrl: "https://github.com/username/paval-landing",
+      features: ["Responsive design", "Smooth animations", "SEO optimized", "Fast loading"]
+    },
+    {
+      id: 4,
+      title: "Analytics Dashboard",
+      description: "Built a comprehensive analytics dashboard with real-time data visualization, custom reports, and interactive charts. Provides deep insights into business metrics and KPIs.",
+      tech: ["React", "D3.js", "Node.js", "PostgreSQL", "Redis"],
+      image: Dashboard,
+      demoUrl: "https://analytics-demo.example.com",
+      githubUrl: "https://github.com/username/analytics-dashboard",
+      features: ["Real-time analytics", "Custom reports", "Data visualization", "Export functionality"]
     }
   ];
+
+  // Auto-play functionality
+  useEffect(() => {
+    if (!isAutoPlay) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % projects.length);
+    }, 5000); // Changed to 5 seconds for better viewing
+
+    return () => clearInterval(interval);
+  }, [isAutoPlay, projects.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % projects.length);
+    setIsAutoPlay(false);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length);
+    setIsAutoPlay(false);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+    setIsAutoPlay(false);
+  };
 
   // Skills data
   const skills = [
@@ -291,8 +339,8 @@ export default function Hero() {
 
 
 
-       // Then replace your projects section JSX with this:
-        <section id="projects" className="py-20">
+       {/* Projects Section */}
+        <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <motion.h2
@@ -304,79 +352,271 @@ export default function Hero() {
               >
                 Featured <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Projects</span>
               </motion.h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mx-auto"></div>
-              <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Here are some projects I've worked on recently. Each project represents my commitment to quality and attention to detail.
+              <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-500 mx-auto mb-4"></div>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Discover my latest projects, showcasing innovative solutions and cutting-edge design crafted with precision and creativity.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
+            <div className="relative">
+              <div className="overflow-hidden">
                 <motion.div
-                  key={project.id}
-                  className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className="flex transition-transform duration-700 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  role="region"
+                  aria-label="Project carousel"
                 >
-                  {/* Fixed Image Section */}
-                  <div className="h-48 bg-gray-200 dark:bg-gray-700 relative overflow-hidden">
-                    {project.images ? (
-                      <Image
-                        src={project.images}
-                        alt={project.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        width={400}
-                        height={192}
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyKKhUnrNcNM91BF5pX2HaH9bcfaSXWGaRmknyKKhUnrNcNM91BF5pX2HaH9bcfaSXWGaRmknyKKhUnrNcNM91BF5pX2HaH9bcfaSXWGaRmknyKKhUnr//Z"
-                        priority={index === 0}
-                      />
-                    ) : (
-                      <div className="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600">
-                        <div className="text-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                          </svg>
-                          <span className="text-sm">Project Image</span>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  {projects.map((project, index) => (
+                    <div key={project.id} className="w-full flex-shrink-0 px-4">
+                      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 bg-white dark:bg-gray-800/90 rounded-3xl shadow-2xl p-6 lg:p-8 backdrop-blur-sm max-w-[1080px] mx-auto">
+                        {/* Project Image */}
+                        <motion.div
+                          className="relative lg:col-span-3 overflow-hidden rounded-2xl group"
+                          style={{ perspective: 1000 }}
+                          initial={{ opacity: 0, y: 50, rotateX: 10 }}
+                          whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                          transition={{ duration: 0.8, delay: 0.2 }}
+                          viewport={{ once: true }}
+                          whileHover={{ rotateY: 5, rotateX: -5 }}
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-500/20 z-10 backdrop-blur-sm group-hover:from-purple-600/30 group-hover:to-blue-500/30 transition-all duration-500"></div>
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            width={1080}
+                            height={720}
+                            layout="responsive"
+                            objectFit="cover"
+                            className="rounded-2xl group-hover:scale-105 transition-transform duration-700 ease-out"
+                            quality={90}
+                            placeholder="blur"
+                            onError={() => console.error(`Failed to load image for ${project.title}`)}
+                          />
+                          <div className="absolute inset-x-4 bottom-4 flex gap-3 z-20">
+                            <motion.a
+                              href={project.demoUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1 bg-white/90 dark:bg-gray-900/90 text-gray-900 dark:text-white px-4 py-2 rounded-xl font-medium text-center backdrop-blur-md shadow-md transition-all duration-300 hover:bg-white hover:dark:bg-gray-900 hover:scale-105 group-hover:opacity-100 opacity-70"
+                              whileHover={{ y: -2 }}
+                              whileTap={{ y: 0 }}
+                              aria-label={`View live demo of ${project.title}`}
+                            >
+                              <span className="flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                                Live Demo
+                              </span>
+                            </motion.a>
+                            <motion.a
+                              href={project.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1 bg-gray-900/90 dark:bg-white/90 text-white dark:text-gray-900 px-4 py-2 rounded-xl font-medium text-center backdrop-blur-md shadow-md transition-all duration-300 hover:bg-gray-900 hover:dark:bg-white hover:scale-105 group-hover:opacity-100 opacity-70"
+                              whileHover={{ y: -2 }}
+                              whileTap={{ y: 0 }}
+                              aria-label={`View source code of ${project.title} on GitHub`}
+                            >
+                              <span className="flex items-center justify-center gap-2">
+                                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                  <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                                </svg>
+                                GitHub
+                              </span>
+                            </motion.a>
+                          </div>
+                          <div className="absolute top-4 left-4 z-20">
+                            <span className="px-3 py-1 bg-white/90 dark:bg-gray-900/90 text-gray-900 dark:text-white rounded-full text-sm font-bold backdrop-blur-md shadow-sm">
+                              {String(index + 1).padStart(2, '0')}
+                            </span>
+                          </div>
+                        </motion.div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech.map((tech, i) => (
-                        <span key={i} className="px-2 py-1 text-xs font-medium rounded-md bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300">
-                          {tech}
-                        </span>
-                      ))}
+                        {/* Project Content */}
+                        <motion.div
+                          className="lg:col-span-2 p-6 lg:p-8 flex flex-col justify-center bg-gradient-to-br from-white/80 to-gray-100/80 dark:from-gray-800/80 dark:to-gray-900/80 rounded-2xl shadow-inner"
+                          initial={{ opacity: 0, x: 50 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.8, delay: 0.4 }}
+                          viewport={{ once: true }}
+                        >
+                          <div className="flex items-center gap-3 mb-6">
+                            <span className="w-12 h-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full"></span>
+                            <span className="text-sm font-semibold text-purple-600 dark:text-purple-400 uppercase tracking-widest">
+                              Project {String(index + 1).padStart(2, '0')}
+                            </span>
+                          </div>
+                          <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight">
+                            {project.title}
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-base lg:text-lg">
+                            {project.description}
+                          </p>
+                          <div className="mb-6">
+                            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 uppercase tracking-wider">
+                              Key Features
+                            </h4>
+                            <div className="grid grid-cols-1 gap-3">
+                              {project.features.map((feature, i) => (
+                                <motion.div
+                                  key={i}
+                                  className="flex items-center gap-2"
+                                  initial={{ opacity: 0, x: -10 }}
+                                  whileInView={{ opacity: 1, x: 0 }}
+                                  transition={{ duration: 0.3, delay: i * 0.1 }}
+                                  viewport={{ once: true }}
+                                >
+                                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full"></div>
+                                  <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                                </motion.div>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="mb-8">
+                            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 uppercase tracking-wider">
+                              Technologies Used
+                            </h4>
+                            <div className="flex flex-wrap gap-2">
+                              {project.tech.map((tech, i) => (
+                                <motion.span
+                                  key={i}
+                                  className="px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-purple-100/80 to-blue-100/80 dark:from-purple-900/40 dark:to-blue-900/40 text-purple-700 dark:text-purple-300 border border-purple-200/50 dark:border-purple-700/50"
+                                  initial={{ opacity: 0, scale: 0.8 }}
+                                  whileInView={{ opacity: 1, scale: 1 }}
+                                  transition={{ duration: 0.3, delay: i * 0.05 }}
+                                  viewport={{ once: true }}
+                                >
+                                  {tech}
+                                </motion.span>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="flex gap-4">
+                            <motion.a
+                              href={project.demoUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
+                              whileHover={{ y: -2 }}
+                              whileTap={{ y: 0 }}
+                              aria-label={`View live demo of ${project.title}`}
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                              Live Demo
+                            </motion.a>
+                            <motion.a
+                              href={project.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-gray-500 font-medium rounded-xl transition-all duration-300 hover:bg-gray-50/50 dark:hover:bg-gray-700/50 flex items-center gap-2"
+                              whileHover={{ y: -2 }}
+                              whileTap={{ y: 0 }}
+                              aria-label={`View source code of ${project.title} on GitHub`}
+                            >
+                              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                              </svg>
+                              View Code
+                            </motion.a>
+                          </div>
+                        </motion.div>
+                      </div>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <a href="#" className="text-purple-600 dark:text-purple-400 font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors">
-                        View Project
-                      </a>
-                      <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
+                  ))}
                 </motion.div>
+              </div>
+
+              {/* Navigation Controls */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:scale-110 z-30 backdrop-blur-md"
+                aria-label="Previous project"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:scale-110 z-30 backdrop-blur-md"
+                aria-label="Next project"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+              <button
+                onClick={() => setIsAutoPlay(!isAutoPlay)}
+                className="absolute top-4 right-4 z-30 px-4 py-2 bg-white/90 dark:bg-gray-800/90 rounded-lg shadow-lg backdrop-blur-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300"
+                aria-label={isAutoPlay ? "Pause carousel" : "Play carousel"}
+              >
+                {isAutoPlay ? (
+                  <span className="flex items-center gap-2">
+                    <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                    </svg>
+                    Pause
+                  </span>
+                ) : (
+                  <span className="flex items-center gap-2">
+                    <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                    Play
+                  </span>
+                )}
+              </button>
+            </div>
+
+            {/* Carousel Indicators */}
+            <div className="flex justify-center mt-8 gap-2">
+              {projects.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'w-10 h-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full'
+                      : 'w-2 h-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 rounded-full'
+                  }`}
+                  aria-label={`Go to project ${index + 1}`}
+                />
               ))}
             </div>
 
+            {/* Progress Bar */}
+            <div className="mt-6 max-w-md mx-auto">
+              <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-2">
+                <span>Project {currentSlide + 1}</span>
+                <span>{projects.length} Projects</span>
+              </div>
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <motion.div
+                  className="h-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full"
+                  initial={{ width: '0%' }}
+                  animate={{ width: `${((currentSlide + 1) / projects.length) * 100}%` }}
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
+            </div>
+
+            {/* Explore All Projects */}
             <div className="mt-12 text-center">
-              <a href="#" className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors">
-                View All Projects
+              <motion.a
+                href="#"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+                whileHover={{ y: -3 }}
+                whileTap={{ y: 0 }}
+                aria-label="Explore all projects"
+              >
+                <span>Explore All Projects</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-              </a>
+              </motion.a>
             </div>
           </div>
         </section>
