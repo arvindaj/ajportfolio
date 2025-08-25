@@ -11,6 +11,10 @@ import profilepic from '../assets/Media.jpg'
 import Multiscale from '../assets/fullstackmultiscale.png'
 import Skillorelanding from '../assets/landingskillorea.png'
 import Dashboard from '../assets/dashboard.png'
+import axios from "axios"
+
+
+
 
 export default function Hero() {
   const [darkMode, setDarkMode] = useState(false);
@@ -126,6 +130,35 @@ export default function Hero() {
       avatar: "/avatar2.jpg"
     }
   ];
+
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:5000/api/contact", formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+      console.log("✅ API response:", res.data);
+      setStatus("✅ Message sent successfully!");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      console.error("❌ Error submitting:", err.response?.data || err.message);
+      setStatus("❌ Failed to send message.");
+    }
+  };
+
 
   return (
     <div className={darkMode ? 'dark' : ''}>
@@ -339,7 +372,7 @@ export default function Hero() {
 
 
 
-       {/* Projects Section */}
+        {/* Projects Section */}
         <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -577,11 +610,10 @@ export default function Hero() {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'w-10 h-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full'
-                      : 'w-2 h-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 rounded-full'
-                  }`}
+                  className={`transition-all duration-300 ${index === currentSlide
+                    ? 'w-10 h-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full'
+                    : 'w-2 h-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 rounded-full'
+                    }`}
                   aria-label={`Go to project ${index + 1}`}
                 />
               ))}
@@ -827,7 +859,7 @@ export default function Hero() {
                 viewport={{ once: true }}
               >
                 <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -836,6 +868,9 @@ export default function Hero() {
                       <input
                         type="text"
                         id="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         placeholder="Your Name"
                       />
@@ -847,6 +882,9 @@ export default function Hero() {
                       <input
                         type="email"
                         id="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         placeholder="Your Email"
                       />
@@ -859,6 +897,9 @@ export default function Hero() {
                     <input
                       type="text"
                       id="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
                       className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       placeholder="Subject"
                     />
@@ -870,6 +911,9 @@ export default function Hero() {
                     <textarea
                       id="message"
                       rows={5}
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
                       className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       placeholder="Your Message"
                     ></textarea>
@@ -880,6 +924,8 @@ export default function Hero() {
                   >
                     Send Message
                   </button>
+
+                  {status && <p className="mt-4 text-center">{status}</p>}
                 </form>
               </motion.div>
             </div>
