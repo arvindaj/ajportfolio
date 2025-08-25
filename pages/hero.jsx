@@ -12,7 +12,7 @@ import Multiscale from '../assets/fullstackmultiscale.png'
 import Skillorelanding from '../assets/landingskillorea.png'
 import Dashboard from '../assets/dashboard.png'
 import axios from "axios"
-
+import CONFIG from "../config/config"
 
 
 
@@ -143,16 +143,22 @@ export default function Hero() {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
-  const handleSubmit = async (e) => {
+  }; const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const res = await axios.post("http://localhost:5000/api/contact", formData, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const res = await axios.post(
+        `${CONFIG.BASE_URL}/contact`,
+        formData, // 👈 send formData
+        {
+          headers: { "Content-Type": "application/json" }
+        }
+      );
+
       console.log("✅ API response:", res.data);
       setStatus("✅ Message sent successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
+
     } catch (err) {
       console.error("❌ Error submitting:", err.response?.data || err.message);
       setStatus("❌ Failed to send message.");
@@ -799,7 +805,7 @@ export default function Hero() {
                     </div>
                     <div className="ml-4">
                       <h4 className="font-medium">Email</h4>
-                      <p className="text-gray-600 dark:text-gray-300">contact@example.com</p>
+                      <p className="text-gray-600 dark:text-gray-300">ajs303259@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -810,7 +816,7 @@ export default function Hero() {
                     </div>
                     <div className="ml-4">
                       <h4 className="font-medium">Phone</h4>
-                      <p className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
+                      <p className="text-gray-600 dark:text-gray-300">91+6383368953</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -822,7 +828,7 @@ export default function Hero() {
                     </div>
                     <div className="ml-4">
                       <h4 className="font-medium">Location</h4>
-                      <p className="text-gray-600 dark:text-gray-300">San Francisco, CA</p>
+                      <p className="text-gray-600 dark:text-gray-300">Coimbatore</p>
                     </div>
                   </div>
                 </div>
