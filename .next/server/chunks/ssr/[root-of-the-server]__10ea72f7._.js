@@ -214,7 +214,7 @@ __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
 const CONFIG = {
-    BASE_URL: ("TURBOPACK compile-time value", "http://localhost:5000/api") || "http://localhost:5000/api"
+    BASE_URL: ("TURBOPACK compile-time value", "https://ajportfoliobackend-1.onrender.com/api") || "http://localhost:5000/api"
 };
 const __TURBOPACK__default__export__ = CONFIG;
 }}),
