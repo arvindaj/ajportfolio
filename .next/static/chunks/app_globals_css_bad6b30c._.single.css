@@ -1936,6 +1936,18 @@
 }
 
 @media (min-width: 40rem) {
+  .sm\:px-0 {
+    padding-inline: calc(var(--spacing) * 0);
+  }
+}
+
+@media (min-width: 40rem) {
+  .sm\:px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+}
+
+@media (min-width: 40rem) {
   .sm\:px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
