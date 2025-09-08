@@ -338,6 +338,10 @@
   z-index: 50;
 }
 
+.col-12 {
+  grid-column: 12;
+}
+
 .\!container {
   width: 100% !important;
 }
@@ -411,6 +415,30 @@
   margin-right: auto;
 }
 
+.me-3:not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  margin-right: calc(var(--spacing) * 3);
+}
+
+.me-3:not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  margin-right: calc(var(--spacing) * 3);
+}
+
+.me-3:not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  margin-right: calc(var(--spacing) * 3);
+}
+
+.me-3:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  margin-left: calc(var(--spacing) * 3);
+}
+
+.me-3:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  margin-left: calc(var(--spacing) * 3);
+}
+
+.me-3:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  margin-left: calc(var(--spacing) * 3);
+}
+
 .mt-1 {
   margin-top: calc(var(--spacing) * 1);
 }
@@ -421,6 +449,10 @@
 
 .mt-4 {
   margin-top: calc(var(--spacing) * 4);
+}
+
+.mt-5 {
+  margin-top: calc(var(--spacing) * 5);
 }
 
 .mt-6 {
@@ -451,6 +483,10 @@
   margin-right: calc(var(--spacing) * 4);
 }
 
+.mb-0 {
+  margin-bottom: calc(var(--spacing) * 0);
+}
+
 .mb-1 {
   margin-bottom: calc(var(--spacing) * 1);
 }
@@ -465,6 +501,10 @@
 
 .mb-4 {
   margin-bottom: calc(var(--spacing) * 4);
+}
+
+.mb-5 {
+  margin-bottom: calc(var(--spacing) * 5);
 }
 
 .mb-6 {
@@ -722,10 +762,6 @@
 
 .max-w-7xl {
   max-width: var(--container-7xl);
-}
-
-.max-w-\[90vw\] {
-  max-width: 90vw;
 }
 
 .max-w-\[100\%\] {
@@ -1532,6 +1568,10 @@
   text-align: center;
 }
 
+.text-start {
+  text-align: start;
+}
+
 .text-2xl {
   font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -1630,6 +1670,10 @@
 
 .text-gray-900 {
   color: var(--color-gray-900);
+}
+
+.text-muted {
+  color: var(--muted);
 }
 
 .text-purple-600 {

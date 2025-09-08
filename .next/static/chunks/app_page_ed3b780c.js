@@ -1,8 +1,8 @@
 (globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
     script: typeof document === "object" ? document.currentScript : undefined,
     chunks: [
-  "static/chunks/node_modules_@splinetool_runtime_build_692a5cd6._.js",
-  "static/chunks/_be60b970._.js",
+  "static/chunks/node_modules_@splinetool_runtime_build_727bb787._.js",
+  "static/chunks/_66aca5f4._.js",
   "static/chunks/node_modules_next_6fe61763._.js",
   "static/chunks/node_modules_framer-motion_dist_es_6ff51a60._.js",
   "static/chunks/node_modules_motion-dom_dist_es_7755b635._.js",
