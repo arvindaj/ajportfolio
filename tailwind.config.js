@@ -1,12 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@appletosolutions/reactbits/**/*.{js,ts,jsx,tsx}", // Add React Bits
+ content: [
+  "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+  "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  "./node_modules/@appletosolutions/reactbits/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: { extend: {} },
+  theme: { extend: {
+    fontFamily: {
+  sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+},
+  } },
   plugins: [],
 };
