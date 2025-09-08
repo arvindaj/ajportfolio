@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
 /* [next]/internal/font/google/geist_2ae47f08.module.css [app-client] (css) */
 @font-face {
   font-family: Geist;
@@ -818,6 +819,10 @@
 
 .max-w-\[90vw\] {
   max-width: 90vw;
+}
+
+.max-w-\[100\%\] {
+  max-width: 100%;
 }
 
 .max-w-\[1080px\] {

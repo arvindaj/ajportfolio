@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -262,6 +263,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 <span className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600/10 to-blue-500/10 dark:from-purple-600/20 dark:to-blue-500/20 text-purple-600 dark:text-purple-400 text-sm font-medium rounded-full mb-4">
                   FullStack Developer
@@ -273,8 +275,8 @@ export default function Hero() {
                   </span>
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-6 max-w-xl mx-auto lg:mx-0">
-                  New-gen coder, mastering JavaScript, React, Next.js, Node.js, and MongoDB, 
-                  I craft elegant, performant, user-friendly web experiences. 
+                  New-gen coder, mastering JavaScript, React, Next.js, Node.js, and MongoDB,
+                  I craft elegant, performant, user-friendly web experiences.
                   Let’s bring your vision to life as a full-stack developer.
                 </p>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-3">
@@ -292,28 +294,35 @@ export default function Hero() {
                   </a>
                 </div>
                 <div className="flex items-center justify-center lg:justify-start gap-3 mt-6">
+                  {/* GitHub Icon */}
                   <a
                     href="https://github.com/arvindaj"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    aria-label="Visit GitHub profile"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path
                         fillRule="evenodd"
-                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504..."
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                         clipRule="evenodd"
                       />
                     </svg>
                   </a>
+
+                  {/* LinkedIn Icon */}
                   <a
                     href="https://www.linkedin.com/in/arvind-j-936aa1228"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    aria-label="Visit LinkedIn profile"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M20.447 20.452h-3.554v-5.569..." />
+                      <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                      />
                     </svg>
                   </a>
                 </div>
@@ -321,10 +330,11 @@ export default function Hero() {
               <motion.div
                 className="flex-1 flex justify-center"
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true, margin: "-50px" }}
               >
-                <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px]">
+                <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] overflow-hidden">
                   <Spline
                     className="h-full w-full"
                     scene="https://prod.spline.design/xXKgRc2oM0iCfGli/scene.splinecode"
@@ -336,7 +346,7 @@ export default function Hero() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-16 bg-gray-50 dark:bg-gray-800/50">
+        <section id="about" className="py-16 bg-gray-50 dark:bg-gray-800/50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <motion.h2
@@ -344,7 +354,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 About <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Me</span>
               </motion.h2>
@@ -356,7 +366,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4">My Journey</h3>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
@@ -373,8 +383,9 @@ export default function Hero() {
               <motion.div
                 className="flex-1 flex justify-center"
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-500"></div>
@@ -389,6 +400,7 @@ export default function Hero() {
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                     onLoad={() => setImageLoaded(true)}
                     onError={() => console.error('Failed to load image')}
+                    priority
                   />
                 </div>
               </motion.div>
@@ -397,7 +409,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4">Education & Experience</h3>
                 <div className="space-y-4">
@@ -423,7 +435,7 @@ export default function Hero() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-16 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+        <section id="projects" className="py-16 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <motion.h2
@@ -431,7 +443,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 Featured <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Projects</span>
               </motion.h2>
@@ -440,173 +452,170 @@ export default function Hero() {
                 Discover my latest projects, showcasing innovative solutions and cutting-edge design crafted with precision and creativity.
               </p>
             </div>
-            <div className="relative">
-              <div className="overflow-hidden">
-                <motion.div
-                  className="flex transition-transform duration-700 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                  role="region"
-                  aria-label="Project carousel"
-                >
-                  {projects.map((project, index) => (
-                    <div key={project.id} className="w-full flex-shrink-0 px-2 sm:px-4">
-                      <div className="grid grid-cols-1 gap-6 bg-white dark:bg-gray-800/90 rounded-3xl shadow-2xl p-4 sm:p-6 max-w-[90vw] sm:max-w-[1080px] mx-auto">
-                        <motion.div
-                          className="relative overflow-hidden rounded-2xl group"
-                          initial={{ opacity: 0, y: 50, rotateX: 10 }}
-                          whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-                          transition={{ duration: 0.8, delay: 0.2 }}
-                          viewport={{ once: true }}
-                          whileHover={{ rotateY: 5, rotateX: -5 }}
-                        >
-                          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-500/20 z-10 backdrop-blur-sm group-hover:from-purple-600/30 group-hover:to-blue-500/30 transition-all duration-500"></div>
-                          <Image
-                            src={project.image}
-                            alt={project.title}
-                            width={800}
-                            height={600}
-                            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 33vw"
-                            layout="responsive"
-                            objectFit="cover"
-                            className="rounded-2xl group-hover:scale-105 transition-transform duration-700 ease-out"
-                            quality={80}
-                            placeholder="blur"
-                            onError={() => console.error(`Failed to load image for ${project.title}`)}
-                          />
-                          <div className="absolute inset-x-2 sm:inset-x-4 bottom-2 sm:bottom-4 flex gap-2 z-20">
-                            <motion.a
-                              href={project.demoUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex-1 bg-white/90 dark:bg-gray-900/90 text-gray-900 dark:text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm text-center backdrop-blur-md shadow-md transition-all duration-300 hover:bg-white hover:dark:bg-gray-900 hover:scale-105 group-hover:opacity-100 opacity-70"
-                              whileHover={{ y: -2 }}
-                              whileTap={{ y: 0 }}
-                              aria-label={`View live demo of ${project.title}`}
-                            >
-                              <span className="flex items-center justify-center gap-1 sm:gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                                Live Demo
-                              </span>
-                            </motion.a>
-                            <motion.a
-                              href={project.githubUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex-1 bg-gray-900/90 dark:bg-white/90 text-white dark:text-gray-900 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm text-center backdrop-blur-md shadow-md transition-all duration-300 hover:bg-gray-900 hover:dark:bg-white hover:scale-105 group-hover:opacity-100 opacity-70"
-                              whileHover={{ y: -2 }}
-                              whileTap={{ y: 0 }}
-                              aria-label={`View source code of ${project.title} on GitHub`}
-                            >
-                              <span className="flex items-center justify-center gap-1 sm:gap-2">
-                                <svg className="h-3 w-3 sm:h-4 sm:w-4" fill="currentColor" viewBox="0 0 24 24">
-                                  <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504..." clipRule="evenodd" />
-                                </svg>
-                                GitHub
-                              </span>
-                            </motion.a>
-                          </div>
-                          <div className="absolute top-2 sm:top-4 left-2 sm:left-4 z-20">
-                            <span className="px-2 sm:px-3 py-1 bg-white/90 dark:bg-gray-900/90 text-gray-900 dark:text-white rounded-full text-xs sm:text-sm font-bold backdrop-blur-md shadow-sm">
-                              {String(index + 1).padStart(2, '0')}
-                            </span>
-                          </div>
-                        </motion.div>
-                        <motion.div
-                          className="p-4 sm:p-6 flex flex-col justify-center bg-gradient-to-br from-white/80 to-gray-100/80 dark:from-gray-800/80 dark:to-gray-900/80 rounded-2xl shadow-inner"
-                          initial={{ opacity: 0, x: 50 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.8, delay: 0.4 }}
-                          viewport={{ once: true }}
-                        >
-                          <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                            <span className="w-8 sm:w-12 h-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full"></span>
-                            <span className="text-xs sm:text-sm font-semibold text-purple-600 dark:text-purple-400 uppercase tracking-widest">
-                              Project {String(index + 1).padStart(2, '0')}
-                            </span>
-                          </div>
-                          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight">
-                            {project.title}
-                          </h3>
-                          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                            {project.description}
-                          </p>
-                          <div className="mb-4 sm:mb-6">
-                            <h4 className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3 uppercase tracking-wider">
-                              Key Features
-                            </h4>
-                            <div className="grid grid-cols-1 gap-2 sm:gap-3">
-                              {project.features.map((feature, i) => (
-                                <motion.div
-                                  key={i}
-                                  className="flex items-center gap-2"
-                                  initial={{ opacity: 0, x: -10 }}
-                                  whileInView={{ opacity: 1, x: 0 }}
-                                  transition={{ duration: 0.3, delay: i * 0.1 }}
-                                  viewport={{ once: true }}
-                                >
-                                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full"></div>
-                                  <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">{feature}</span>
-                                </motion.div>
-                              ))}
-                            </div>
-                          </div>
-                          <div className="mb-6 sm:mb-8">
-                            <h4 className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3 uppercase tracking-wider">
-                              Technologies Used
-                            </h4>
-                            <div className="flex flex-wrap gap-1 sm:gap-2">
-                              {project.tech.map((tech, i) => (
-                                <motion.span
-                                  key={i}
-                                  className="px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-medium rounded-full bg-gradient-to-r from-purple-100/80 to-blue-100/80 dark:from-purple-900/40 dark:to-blue-900/40 text-purple-700 dark:text-purple-300 border border-purple-200/50 dark:border-purple-700/50"
-                                  initial={{ opacity: 0, scale: 0.8 }}
-                                  whileInView={{ opacity: 1, scale: 1 }}
-                                  transition={{ duration: 0.3, delay: i * 0.05 }}
-                                  viewport={{ once: true }}
-                                >
-                                  {tech}
-                                </motion.span>
-                              ))}
-                            </div>
-                          </div>
-                          <div className="flex flex-wrap gap-2 sm:gap-4">
-                            <motion.a
-                              href={project.demoUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-medium rounded-lg text-xs sm:text-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-1 sm:gap-2"
-                              whileHover={{ y: -2 }}
-                              whileTap={{ y: 0 }}
-                              aria-label={`View live demo of ${project.title}`}
-                            >
-                              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="relative overflow-hidden">
+              <motion.div
+                className="flex transition-transform duration-700 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                role="region"
+                aria-label="Project carousel"
+              >
+                {projects.map((project, index) => (
+                  <div key={project.id} className="w-full flex-shrink-0 px-2 sm:px-4">
+                    <div className="grid grid-cols-1 gap-6 bg-white dark:bg-gray-800/90 rounded-3xl shadow-2xl p-4 sm:p-6 max-w-[100%] sm:max-w-[1080px] mx-auto">
+                      <motion.div
+                        className="relative overflow-hidden rounded-2xl group"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-500/20 z-10 backdrop-blur-sm group-hover:from-purple-600/30 group-hover:to-blue-500/30 transition-all duration-500"></div>
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={800}
+                          height={600}
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="rounded-2xl group-hover:scale-105 transition-transform duration-700 ease-out"
+                          quality={80}
+                          placeholder="blur"
+                          priority
+                          onError={() => console.error(`Failed to load image for ${project.title}`)}
+                        />
+                        <div className="absolute inset-x-2 sm:inset-x-4 bottom-2 sm:bottom-4 flex gap-2 z-20">
+                          <motion.a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 bg-white/90 dark:bg-gray-900/90 text-gray-900 dark:text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm text-center backdrop-blur-md shadow-md transition-all duration-300 hover:bg-white hover:dark:bg-gray-900 hover:scale-105 group-hover:opacity-100 opacity-70"
+                            whileHover={{ y: -2 }}
+                            whileTap={{ y: 0 }}
+                            aria-label={`View live demo of ${project.title}`}
+                          >
+                            <span className="flex items-center justify-center gap-1 sm:gap-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                               </svg>
                               Live Demo
-                            </motion.a>
-                            <motion.a
-                              href={project.githubUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="px-4 sm:px-6 py-2 sm:py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-gray-500 font-medium rounded-lg text-xs sm:text-sm transition-all duration-300 hover:bg-gray-50/50 dark:hover:bg-gray-700/50 flex items-center gap-1 sm:gap-2"
-                              whileHover={{ y: -2 }}
-                              whileTap={{ y: 0 }}
-                              aria-label={`View source code of ${project.title} on GitHub`}
-                            >
-                              <svg className="h-4 w-4 sm:h-5 sm:w-5" fill="currentColor" viewBox="0 0 24 24">
+                            </span>
+                          </motion.a>
+                          <motion.a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 bg-gray-900/90 dark:bg-white/90 text-white dark:text-gray-900 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium text-xs sm:text-sm text-center backdrop-blur-md shadow-md transition-all duration-300 hover:bg-gray-900 hover:dark:bg-white hover:scale-105 group-hover:opacity-100 opacity-70"
+                            whileHover={{ y: -2 }}
+                            whileTap={{ y: 0 }}
+                            aria-label={`View source code of ${project.title} on GitHub`}
+                          >
+                            <span className="flex items-center justify-center gap-1 sm:gap-2">
+                              <svg className="h-3 w-3 sm:h-4 sm:w-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504..." clipRule="evenodd" />
                               </svg>
-                              View Code
-                            </motion.a>
+                              GitHub
+                            </span>
+                          </motion.a>
+                        </div>
+                        <div className="absolute top-2 sm:top-4 left-2 sm:left-4 z-20">
+                          <span className="px-2 sm:px-3 py-1 bg-white/90 dark:bg-gray-900/90 text-gray-900 dark:text-white rounded-full text-xs sm:text-sm font-bold backdrop-blur-md shadow-sm">
+                            {String(index + 1).padStart(2, '0')}
+                          </span>
+                        </div>
+                      </motion.div>
+                      <motion.div
+                        className="p-4 sm:p-6 flex flex-col justify-center bg-gradient-to-br from-white/80 to-gray-100/80 dark:from-gray-800/80 dark:to-gray-900/80 rounded-2xl shadow-inner"
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                      >
+                        <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                          <span className="w-8 sm:w-12 h-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full"></span>
+                          <span className="text-xs sm:text-sm font-semibold text-purple-600 dark:text-purple-400 uppercase tracking-widest">
+                            Project {String(index + 1).padStart(2, '0')}
+                          </span>
+                        </div>
+                        <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight">
+                          {project.title}
+                        </h3>
+                        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
+                          {project.description}
+                        </p>
+                        <div className="mb-4 sm:mb-6">
+                          <h4 className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3 uppercase tracking-wider">
+                            Key Features
+                          </h4>
+                          <div className="grid grid-cols-1 gap-2 sm:gap-3">
+                            {project.features.map((feature, i) => (
+                              <motion.div
+                                key={i}
+                                className="flex items-center gap-2"
+                                initial={{ opacity: 0, x: -10 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.3, delay: i * 0.1 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                              >
+                                <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full"></div>
+                                <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                              </motion.div>
+                            ))}
                           </div>
-                        </motion.div>
-                      </div>
+                        </div>
+                        <div className="mb-6 sm:mb-8">
+                          <h4 className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3 uppercase tracking-wider">
+                            Technologies Used
+                          </h4>
+                          <div className="flex flex-wrap gap-1 sm:gap-2">
+                            {project.tech.map((tech, i) => (
+                              <motion.span
+                                key={i}
+                                className="px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-medium rounded-full bg-gradient-to-r from-purple-100/80 to-blue-100/80 dark:from-purple-900/40 dark:to-blue-900/40 text-purple-700 dark:text-purple-300 border border-purple-200/50 dark:border-purple-700/50"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.3, delay: i * 0.05 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                              >
+                                {tech}
+                              </motion.span>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="flex flex-wrap gap-2 sm:gap-4">
+                          <motion.a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-medium rounded-lg text-xs sm:text-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-1 sm:gap-2"
+                            whileHover={{ y: -2 }}
+                            whileTap={{ y: 0 }}
+                            aria-label={`View live demo of ${project.title}`}
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            Live Demo
+                          </motion.a>
+                          <motion.a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-4 sm:px-6 py-2 sm:py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-gray-500 font-medium rounded-lg text-xs sm:text-sm transition-all duration-300 hover:bg-gray-50/50 dark:hover:bg-gray-700/50 flex items-center gap-1 sm:gap-2"
+                            whileHover={{ y: -2 }}
+                            whileTap={{ y: 0 }}
+                            aria-label={`View source code of ${project.title} on GitHub`}
+                          >
+                            <svg className="h-4 w-4 sm:h-5 sm:w-5" fill="currentColor" viewBox="0 0 24 24">
+                              <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504..." clipRule="evenodd" />
+                            </svg>
+                            View Code
+                          </motion.a>
+                        </div>
+                      </motion.div>
                     </div>
-                  ))}
-                </motion.div>
-              </div>
+                  </div>
+                ))}
+              </motion.div>
               <button
                 onClick={prevSlide}
                 className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:scale-110 z-30 backdrop-blur-md"
@@ -665,7 +674,7 @@ export default function Hero() {
                 <span>Project {currentSlide + 1}</span>
                 <span>{projects.length} Projects</span>
               </div>
-              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 sm:h-2">
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 sm:h-2 overflow-hidden">
                 <motion.div
                   className="h-1.5 sm:h-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full"
                   initial={{ width: '0%' }}
@@ -692,7 +701,7 @@ export default function Hero() {
         </section>
 
         {/* Skills Section */}
-        <section id="skills" className="py-16 bg-gray-50 dark:bg-gray-800/50">
+        <section id="skills" className="py-16 bg-gray-50 dark:bg-gray-800/50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <motion.h2
@@ -700,7 +709,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 Technical <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Skills</span>
               </motion.h2>
@@ -711,7 +720,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Development Skills</h3>
                 <div className="space-y-4 sm:space-y-6">
@@ -721,13 +730,13 @@ export default function Hero() {
                         <span className="text-sm sm:text-base font-medium">{skill.name}</span>
                         <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 sm:h-2">
+                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 sm:h-2 overflow-hidden">
                         <motion.div
                           className="bg-gradient-to-r from-purple-600 to-blue-500 h-1.5 sm:h-2 rounded-full"
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.level}%` }}
                           transition={{ duration: 1, delay: index * 0.1 }}
-                          viewport={{ once: true }}
+                          viewport={{ once: true, margin: "-50px" }}
                         ></motion.div>
                       </div>
                     </div>
@@ -738,7 +747,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Tools & Technologies</h3>
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
@@ -755,7 +764,7 @@ export default function Hero() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="py-16">
+        <section id="testimonials" className="py-16 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <motion.h2
@@ -763,7 +772,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 Client <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Testimonials</span>
               </motion.h2>
@@ -780,7 +789,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-50px" }}
                 >
                   <div className="flex items-center mb-4">
                     <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden mr-3 sm:mr-4">
@@ -799,7 +808,7 @@ export default function Hero() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-16 bg-gray-50 dark:bg-gray-800/50">
+        <section id="contact" className="py-16 bg-gray-50 dark:bg-gray-800/50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <motion.h2
@@ -807,7 +816,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 Get In <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Touch</span>
               </motion.h2>
@@ -821,7 +830,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Contact Information</h3>
                 <div className="space-y-4">
@@ -862,24 +871,35 @@ export default function Hero() {
                 </div>
                 <h3 className="text-xl sm:text-2xl font-semibold mt-6 sm:mt-10 mb-4 sm:mb-6">Follow Me</h3>
                 <div className="flex space-x-3 sm:space-x-4">
+                  {/* GitHub Icon */}
                   <a
                     href="https://github.com/arvindaj"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                    aria-label="Visit GitHub profile"
                   >
                     <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504..." clipRule="evenodd" />
+                      <path
+                        fillRule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </a>
+
+                  {/* LinkedIn Icon */}
                   <a
                     href="https://www.linkedin.com/in/arvind-j-936aa1228"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                    aria-label="Visit LinkedIn profile"
                   >
                     <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M20.447 20.452h-3.554v-5.569..." />
+                      <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                      />
                     </svg>
                   </a>
                 </div>
@@ -888,7 +908,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Send Me a Message</h3>
                 <form className="space-y-4" onSubmit={handleSubmit}>
@@ -976,26 +996,35 @@ export default function Hero() {
                 </p>
               </div>
               <div className="flex space-x-4 sm:space-x-6">
+                {/* GitHub Icon */}
                 <a
                   href="https://github.com/arvindaj"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                  aria-label="Visit GitHub profile"
                 >
-                  <span className="sr-only">GitHub</span>
-                  <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504..." clipRule="evenodd" />
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      fillRule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </a>
+
+                {/* LinkedIn Icon */}
                 <a
                   href="https://www.linkedin.com/in/arvind-j-936aa1228"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                  aria-label="Visit LinkedIn profile"
                 >
-                  <span className="sr-only">LinkedIn</span>
-                  <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569..." />
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
                   </svg>
                 </a>
               </div>

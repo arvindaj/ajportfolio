@@ -728,6 +728,10 @@
   max-width: 90vw;
 }
 
+.max-w-\[100\%\] {
+  max-width: 100%;
+}
+
 .max-w-\[1080px\] {
   max-width: 1080px;
 }
