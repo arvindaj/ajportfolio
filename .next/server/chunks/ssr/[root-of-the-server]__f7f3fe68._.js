@@ -742,7 +742,7 @@ function Hero() {
             ],
             image: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$fullstackmultiscale$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$fullstackmultiscale$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
             demoUrl: "https://multiscalefrontendwebsite.vercel.app/",
-            githubUrl: "https://github.com/username/trading-platform",
+            githubUrl: "https://github.com/arvindaj/multiscalefrontendwebsite",
             features: [
                 "Real-time market data",
                 "Advanced charting",
@@ -762,8 +762,8 @@ function Hero() {
                 "AWS S3"
             ],
             image: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$landingskillorea$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$landingskillorea$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
-            demoUrl: "https://landingpageone-pi.vercel.app/",
-            githubUrl: "https://github.com/username/skillore-platform",
+            demoUrl: "https://landingpageone-pi.vercel.app",
+            githubUrl: "https://github.com/arvindaj/landingpageone",
             features: [
                 "Course management",
                 "Video streaming",
@@ -782,8 +782,8 @@ function Hero() {
                 "Vercel"
             ],
             image: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$landingpagepaval$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$landingpagepaval$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
-            demoUrl: "https://paval-landing.example.com",
-            githubUrl: "https://github.com/username/paval-landing",
+            demoUrl: "https://pavalsoftapplanding.vercel.app",
+            githubUrl: "https://github.com/arvindaj/pavalsoftapplanding",
             features: [
                 "Responsive design",
                 "Smooth animations",
@@ -803,8 +803,8 @@ function Hero() {
                 "Redis"
             ],
             image: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$dashboard$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$dashboard$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
-            demoUrl: "https://analytics-demo.example.com",
-            githubUrl: "https://github.com/username/analytics-dashboard",
+            demoUrl: "https://myskilloreadashboard.vercel.app/",
+            githubUrl: "https://https://github.com/arvindaj/myskilloreadashboard",
             features: [
                 "Real-time analytics",
                 "Custom reports",

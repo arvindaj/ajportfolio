@@ -45,7 +45,7 @@ export default function Hero() {
       tech: ["React", "Node.js", "MongoDB", "WebSocket", "Chart.js"],
       image: Multiscale,
       demoUrl: "https://multiscalefrontendwebsite.vercel.app/",
-      githubUrl: "https://github.com/username/trading-platform",
+      githubUrl: "https://github.com/arvindaj/multiscalefrontendwebsite",
       features: ["Real-time market data", "Advanced charting", "Portfolio management", "Risk analytics"],
     },
     {
@@ -54,8 +54,8 @@ export default function Hero() {
       description: "Created an interactive e-learning platform with course management, video streaming, progress tracking, and certification system. Features responsive design and seamless user experience.",
       tech: ["Next.js", "TypeScript", "Prisma", "Stripe", "AWS S3"],
       image: Skillorelanding,
-      demoUrl: "https://landingpageone-pi.vercel.app/",
-      githubUrl: "https://github.com/username/skillore-platform",
+      demoUrl: "https://landingpageone-pi.vercel.app",
+      githubUrl: "https://github.com/arvindaj/landingpageone",
       features: ["Course management", "Video streaming", "Progress tracking", "Certifications"],
     },
     {
@@ -64,8 +64,8 @@ export default function Hero() {
       description: "Designed and developed a modern business landing page with stunning visuals, smooth animations, and conversion-optimized layout. Fully responsive with excellent performance metrics.",
       tech: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
       image: Landingpaval,
-      demoUrl: "https://paval-landing.example.com",
-      githubUrl: "https://github.com/username/paval-landing",
+      demoUrl: "https://pavalsoftapplanding.vercel.app",
+      githubUrl: "https://github.com/arvindaj/pavalsoftapplanding",
       features: ["Responsive design", "Smooth animations", "SEO optimized", "Fast loading"],
     },
     {
@@ -74,8 +74,8 @@ export default function Hero() {
       description: "Built a comprehensive analytics dashboard with real-time data visualization, custom reports, and interactive charts. Provides deep insights into business metrics and KPIs.",
       tech: ["React", "D3.js", "Node.js", "PostgreSQL", "Redis"],
       image: Dashboard,
-      demoUrl: "https://analytics-demo.example.com",
-      githubUrl: "https://github.com/username/analytics-dashboard",
+      demoUrl: "https://myskilloreadashboard.vercel.app/",
+      githubUrl: "https://https://github.com/arvindaj/myskilloreadashboard",
       features: ["Real-time analytics", "Custom reports", "Data visualization", "Export functionality"],
     },
   ];
