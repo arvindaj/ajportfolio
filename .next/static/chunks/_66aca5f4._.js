@@ -842,14 +842,12 @@ function Hero() {
         },
         {
             id: 8,
-            title: "Analytics Dashboard",
+            title: "Blockchain Landing ",
             description: "Built a comprehensive analytics dashboard with real-time data visualization, custom reports, and interactive charts. Provides deep insights into business metrics and KPIs.",
             tech: [
                 "React",
-                "D3.js",
-                "Node.js",
-                "PostgreSQL",
-                "Redis"
+                "Bootstrap",
+                "aos"
             ],
             image: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$dashboard$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$dashboard$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
             demoUrl: "https://blockchain-t91g.vercel.app/",

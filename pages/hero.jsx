@@ -110,9 +110,9 @@ export default function Hero() {
     },
       {
       id: 8,
-      title: "Analytics Dashboard",
+      title: "Blockchain Landing ",
       description: "Built a comprehensive analytics dashboard with real-time data visualization, custom reports, and interactive charts. Provides deep insights into business metrics and KPIs.",
-      tech: ["React", "D3.js", "Node.js", "PostgreSQL", "Redis"],
+      tech: ["React", "Bootstrap", "aos"],
       image: Dashboard,
       demoUrl: "https://blockchain-t91g.vercel.app/",
       githubUrl: "https://github.com/arvindaj/blockchain",
