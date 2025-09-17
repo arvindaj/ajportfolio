@@ -833,6 +833,10 @@
   transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
 }
 
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
 .resize {
   resize: both;
 }
@@ -857,6 +861,14 @@
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1726,6 +1738,10 @@
   opacity: .2;
 }
 
+.opacity-25 {
+  opacity: .25;
+}
+
 .opacity-30 {
   opacity: .3;
 }
@@ -1736,6 +1752,10 @@
 
 .opacity-70 {
   opacity: .7;
+}
+
+.opacity-75 {
+  opacity: .75;
 }
 
 .opacity-80 {
@@ -2107,6 +2127,10 @@
 
 .focus\:ring-purple-600:focus {
   --tw-ring-color: var(--color-purple-600);
+}
+
+.disabled\:opacity-70:disabled {
+  opacity: .7;
 }
 
 @media (min-width: 40rem) {
@@ -2629,8 +2653,20 @@
 }
 
 @media (min-width: 48rem) {
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 48rem) {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 48rem) {
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -3273,6 +3309,7 @@
     --ease-in: cubic-bezier(.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, .2, 1);
     --ease-in-out: cubic-bezier(.4, 0, .2, 1);
+    --animate-spin: spin 1s linear infinite;
     --blur-sm: 8px;
     --blur-md: 12px;
     --blur-3xl: 64px;
@@ -4421,6 +4458,12 @@
 @property --tw-ease {
   syntax: "*";
   inherits: false
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=app_globals_css_bad6b30c._.single.css.map*/
