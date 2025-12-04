@@ -78,6 +78,16 @@ export default function Hero() {
       githubUrl: "https://https://github.com/arvindaj/myskilloreadashboard",
       features: ["Real-time analytics", "Custom reports", "Data visualization", "Export functionality"],
     },
+    {
+       id: 4,
+      title: "Belair Cottages",
+      description: "Built a comprehensive analytics dashboard with real-time data visualization, custom reports, and interactive charts. Provides deep insights into business metrics and KPIs.",
+      tech: ["React", "framer-motion", "Node.js", "Redis"],
+      image: Dashboard,
+      demoUrl: "https://belairwebsitecottage.vercel.app/",
+      githubUrl: "https://github.com/arvindaj/BelairWebsitecottage",
+      features: ["Real-time analytics", "Custom reports", "Data visualization", "Export functionality"],
+    }
   ];
 
   useEffect(() => {
