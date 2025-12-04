@@ -884,6 +884,27 @@ const __TURBOPACK__default__export__ = {
     blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAVUlEQVR42j2NSxLAIAhDvf9VbcXKT1YpuHCRyQTeJI2IsJhh5vC9U3Gc8yYsaO6eQSFqULMDlmvm+rWIgIjiHQNEEyMby3t/UO0HKHqtmrEroi/hiR/W7HtIBFlD0wAAAABJRU5ErkJggg=="
 };
 }),
+"[project]/assets/BelairCottages.png (static in ecmascript)", ((__turbopack_context__) => {
+
+__turbopack_context__.v("/_next/static/media/BelairCottages.24cb21ea.png");}),
+"[project]/assets/BelairCottages.png.mjs { IMAGE => \"[project]/assets/BelairCottages.png (static in ecmascript)\" } [app-ssr] (structured image object with data url, ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$BelairCottages$2e$png__$28$static__in__ecmascript$29$__ = __turbopack_context__.i("[project]/assets/BelairCottages.png (static in ecmascript)");
+;
+const __TURBOPACK__default__export__ = {
+    src: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$BelairCottages$2e$png__$28$static__in__ecmascript$29$__["default"],
+    width: 1898,
+    height: 911,
+    blurWidth: 8,
+    blurHeight: 4,
+    blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAAj0lEQVR42gGEAHv/ALq5tf+9vbn/ure1/7Skqv+yoaf/ubaz/7u4tv/Bvrr/AC0qH/8sLCL/Ozgx/0pDOv9GPTX/Qzox/zkuJf9BOCT/ACAcEP8kIRf/JyYg/zIuKf8yLin/OzMm/ysfFf8pIg//ACYmHf9NRT7/O0I//0RQTP9LWFP/ZWBX/2lfVf88MiL/ZxQ/1J2vrMoAAAAASUVORK5CYII="
+};
+}),
 "[project]/component/nav.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -1388,9 +1409,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$Media$2e$jpg$2e$mj
 var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$fullstackmultiscale$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$fullstackmultiscale$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/assets/fullstackmultiscale.png.mjs { IMAGE => "[project]/assets/fullstackmultiscale.png (static in ecmascript)" } [app-ssr] (structured image object with data url, ecmascript)');
 var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$landingskillorea$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$landingskillorea$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/assets/landingskillorea.png.mjs { IMAGE => "[project]/assets/landingskillorea.png (static in ecmascript)" } [app-ssr] (structured image object with data url, ecmascript)');
 var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$dashboard$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$dashboard$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/assets/dashboard.png.mjs { IMAGE => "[project]/assets/dashboard.png (static in ecmascript)" } [app-ssr] (structured image object with data url, ecmascript)');
+var __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$BelairCottages$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$BelairCottages$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__ = __turbopack_context__.i('[project]/assets/BelairCottages.png.mjs { IMAGE => "[project]/assets/BelairCottages.png (static in ecmascript)" } [app-ssr] (structured image object with data url, ecmascript)');
 var __TURBOPACK__imported__module__$5b$project$5d2f$component$2f$nav$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/component/nav.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$component$2f$herosection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/component/herosection.jsx [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -1514,7 +1537,7 @@ function Hero() {
                 "Node.js",
                 "Redis"
             ],
-            image: BelairCottages,
+            image: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$BelairCottages$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$BelairCottages$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
             demoUrl: "https://belairwebsitecottage.vercel.app/",
             githubUrl: "https://github.com/arvindaj/BelairWebsitecottage",
             features: [
@@ -3199,4 +3222,4 @@ function Hero() {
 }),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__1013deb4._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__1b693733._.js.map

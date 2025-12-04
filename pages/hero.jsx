@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Spline from '@splinetool/react-spline';
 import Contact from "../component/contact"
 
 
@@ -15,6 +14,7 @@ import profilepic from '../assets/Media.jpg';
 import Multiscale from '../assets/fullstackmultiscale.png';
 import Skillorelanding from '../assets/landingskillorea.png';
 import Dashboard from '../assets/dashboard.png';
+import BelairCottages from '../assets/BelairCottages.png';
 
 
 import Navbar from '../component/nav';
@@ -83,7 +83,7 @@ export default function Hero() {
       title: "Belair Cottages",
       description: "Built a comprehensive analytics dashboard with real-time data visualization, custom reports, and interactive charts. Provides deep insights into business metrics and KPIs.",
       tech: ["React", "framer-motion", "Node.js", "Redis"],
-      image: Dashboard,
+      image: BelairCottages,
       demoUrl: "https://belairwebsitecottage.vercel.app/",
       githubUrl: "https://github.com/arvindaj/BelairWebsitecottage",
       features: ["Real-time analytics", "Custom reports", "Data visualization", "Export functionality"],
