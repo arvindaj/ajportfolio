@@ -84,7 +84,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true, margin: "-50px" }}
           >
-            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] overflow-hidden">
+            <div className="w-full max-w-sm sm:max-w-sm md:max-w-md lg:max-w-lg h-[285px] sm:h-[250px] md:h-[350px] lg:h-[400px] overflow-hidden">
               <Spline
                 className="h-full w-full"
                 scene="https://prod.spline.design/xXKgRc2oM0iCfGli/scene.splinecode"

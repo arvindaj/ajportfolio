@@ -122,22 +122,6 @@ export default function Hero() {
     { name: "TypeScript", level: 70 },
   ];
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      role: "Product Manager at TechCorp",
-      content: "Working with this developer was an absolute pleasure. Their attention to detail and commitment to quality is unmatched.",
-      avatar: "/avatar1.jpg",
-    },
-    {
-      id: 2,
-      name: "Michael Chen",
-      role: "Founder, StartupXYZ",
-      content: "Delivered our project ahead of schedule with all requirements perfectly implemented. Would definitely hire again!",
-      avatar: "/avatar2.jpg",
-    },
-  ];
 
   const [formData, setFormData] = useState({
     name: "",
@@ -182,9 +166,8 @@ export default function Hero() {
         </Head>
 
        <Navbar/>
-
        <HeroSection/>
-
+       
         {/* About Section */}
         <section id="about" className="py-16 bg-gray-50 dark:bg-gray-800/50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -255,7 +238,7 @@ export default function Hero() {
                 <div className="space-y-4">
                   <div className="border-l-4 border-purple-500 pl-4 py-2">
                     <h4 className="text-base sm:text-lg font-medium">FullStack Developer</h4>
-                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">BNR Cogniitec • Dec-2024 - Present</p>
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">BNR Cogniitec • Dec-2024 - April-2026</p>
                     <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Leading frontend development for enterprise SaaS products</p>
                   </div>
                   <div className="border-l-4 border-blue-500 pl-4 py-2">
@@ -275,7 +258,7 @@ export default function Hero() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-16  overflow-hidden">
+        <section id="projects" className="py-16  overflow-hidden dark:bg-gray-800/50 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <motion.h2
@@ -308,7 +291,7 @@ export default function Hero() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true, margin: "-50px" }}
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.02 }}
                       >
                         <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-500/20 z-10 backdrop-blur-sm group-hover:from-purple-600/30 group-hover:to-blue-500/30 transition-all duration-500"></div>
                         <Image
@@ -323,7 +306,7 @@ export default function Hero() {
                           priority
                           onError={() => console.error(`Failed to load image for ${project.title}`)}
                         />
-                        <div className="absolute inset-x-2 sm:inset-x-4 bottom-2 sm:bottom-4 flex gap-2 z-20">
+                        <div className="absolute inset-x-2 sm:inset-x-4 bottom-3 sm:bottom-4 flex gap-2 z-20">
                           <motion.a
                             href={project.demoUrl}
                             target="_blank"
@@ -611,10 +594,6 @@ export default function Hero() {
           </div>
         </section>
 
-      
-
-        
-
         <Contact/>
 
         {/* Footer */}
@@ -665,6 +644,7 @@ export default function Hero() {
             </div>
           </div>
         </footer>
+
       </div>
     </div>
   );
