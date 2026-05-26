@@ -214,7 +214,7 @@ export default function Hero() {
                   My journey started with curiosity and grew into a love for solving problems with clean code.
                 </p>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
-                  Skilled in JavaScript, React.js, Next.js, Python, and MongoDB, I thrive on creating smooth and performant web experiences.
+                  Skilled in JavaScript, React.js, Next.js, Python, AI, and MongoDB, I thrive on creating smooth and performant web experiences.
                 </p>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                   I&apos;m a quick learner, highly motivated, and ready to collaborate in a dynamic team.
