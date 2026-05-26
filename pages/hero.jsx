@@ -15,6 +15,7 @@ import Multiscale from '../assets/fullstackmultiscale.png';
 import Skillorelanding from '../assets/landingskillorea.png';
 import Dashboard from '../assets/dashboard.png';
 import BelairCottages from '../assets/BelairCottages.png';
+import Aloodo from '../assets/aloodo.png';
 
 
 import Navbar from '../component/nav';
@@ -40,6 +41,22 @@ export default function Hero() {
   const projects = [
     {
       id: 1,
+      title: "Aloodo Social Media Platform",
+      description:
+        "Developed a modern social media platform that enables users to connect, share posts, interact in real time, and build online communities. The platform includes features like user authentication, real-time messaging, content sharing, notifications, and responsive design for a seamless user experience across devices.",
+      tech: ["React", "Node.js", "MongoDB", "WebSocket", "Tailwind CSS"],
+      image: Aloodo,
+      demoUrl: "https://aladoo-website.vercel.app/",
+      githubUrl: "https://github.com/arvindaj/aladoo_website",
+      features: [
+        "Real-time messaging",
+        "Post sharing and interactions",
+        "User authentication",
+        "Responsive social feed",
+      ],
+    },
+    {
+      id: 2,
       title: "Full-Stack Trading Platform",
       description: "Developed a comprehensive trading platform with real-time data integration, advanced charting capabilities, and secure transaction processing. Built with modern technologies for optimal performance and scalability.",
       tech: ["React", "Node.js", "MongoDB", "WebSocket", "Chart.js"],
@@ -49,7 +66,7 @@ export default function Hero() {
       features: ["Real-time market data", "Advanced charting", "Portfolio management", "Risk analytics"],
     },
     {
-      id: 2,
+      id: 3,
       title: "Skillore E-Learning Platform",
       description: "Created an interactive e-learning platform with course management, video streaming, progress tracking, and certification system. Features responsive design and seamless user experience.",
       tech: ["Next.js", "TypeScript", "Prisma", "Stripe", "AWS S3"],
@@ -59,7 +76,7 @@ export default function Hero() {
       features: ["Course management", "Video streaming", "Progress tracking", "Certifications"],
     },
     {
-      id: 3,
+      id: 4,
       title: "Paval Business Landing",
       description: "Designed and developed a modern business landing page with stunning visuals, smooth animations, and conversion-optimized layout. Fully responsive with excellent performance metrics.",
       tech: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
@@ -69,7 +86,7 @@ export default function Hero() {
       features: ["Responsive design", "Smooth animations", "SEO optimized", "Fast loading"],
     },
     {
-      id: 4,
+      id: 5,
       title: "Analytics Dashboard",
       description: "Built a comprehensive analytics dashboard with real-time data visualization, custom reports, and interactive charts. Provides deep insights into business metrics and KPIs.",
       tech: ["React", "D3.js", "Node.js", "PostgreSQL", "Redis"],
@@ -79,7 +96,7 @@ export default function Hero() {
       features: ["Real-time analytics", "Custom reports", "Data visualization", "Export functionality"],
     },
     {
-       id: 4,
+      id: 6,
       title: "Belair Cottages",
       description: "Built a comprehensive analytics dashboard with real-time data visualization, custom reports, and interactive charts. Provides deep insights into business metrics and KPIs.",
       tech: ["React", "framer-motion", "Node.js", "Redis"],
@@ -165,9 +182,9 @@ export default function Hero() {
           <link rel="icon" href="/media.jpg" />
         </Head>
 
-       <Navbar/>
-       <HeroSection/>
-       
+        <Navbar />
+        <HeroSection />
+
         {/* About Section */}
         <section id="about" className="py-16 bg-gray-50 dark:bg-gray-800/50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -594,7 +611,7 @@ export default function Hero() {
           </div>
         </section>
 
-        <Contact/>
+        <Contact />
 
         {/* Footer */}
         <footer className="py-6 bg-white dark:bg-gray-900">
